@@ -46,8 +46,17 @@ export default function ChatPage() {
   }, []);
 
   useEffect(() => {
-    if (user) loadChats().catch(() => {});
-  }, [user, loadChats]);
+    if (!user) return;
+    let cancelled = false;
+    api<{ chats: ChatSummary[] }>("/chat")
+      .then((res) => {
+        if (!cancelled) setChats(res.chats);
+      })
+      .catch(() => {});
+    return () => {
+      cancelled = true;
+    };
+  }, [user]);
 
   useEffect(() => {
     bottomRef.current?.scrollIntoView({ behavior: "smooth" });

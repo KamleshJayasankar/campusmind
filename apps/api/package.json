@@ -4,9 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "vitest run",
     "dev": "tsx watch src/index.ts",
-    "worker": "tsx watch src/worker.ts"
+    "worker": "tsx watch src/worker.ts",
+    "typecheck": "tsc -p ."
   },
   "keywords": [],
   "author": "",
@@ -31,7 +32,10 @@
     "@types/multer": "^2.3.0",
     "@types/node": "^26.6.4",
     "@types/pg": "^8.23.1",
+    "@types/supertest": "^7.2.1",
+    "supertest": "^7.3.1",
     "tsx": "^4.23.15",
-    "typescript": "^7.0.2"
+    "typescript": "^7.0.2",
+    "vitest": "^4.1.0"
   }
 }

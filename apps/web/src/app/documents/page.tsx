@@ -28,8 +28,17 @@ export default function DocumentsPage() {
   }, []);
 
   useEffect(() => {
-    if (user) load().catch(() => {});
-  }, [user, load]);
+    if (!user) return;
+    let cancelled = false;
+    api<{ documents: DocumentItem[] }>("/documents")
+      .then((res) => {
+        if (!cancelled) setDocuments(res.documents);
+      })
+      .catch(() => {});
+    return () => {
+      cancelled = true;
+    };
+  }, [user]);
 
   const pending = documents.some((d) => d.status === "uploaded" || d.status === "processing");
   useEffect(() => {
