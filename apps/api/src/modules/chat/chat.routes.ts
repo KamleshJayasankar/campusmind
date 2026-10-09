@@ -2,6 +2,7 @@ import { Router } from "express";
 import { z } from "zod";
 import { pool } from "../../db";
 import { requireAuth } from "../../middleware/auth";
+import { rateLimit } from "../../middleware/rateLimit";
 import { answerQuestion, HttpError } from "./chat.service";
 
 export const chatRouter = Router();
@@ -11,19 +12,25 @@ const askSchema = z.object({
   chatId: z.string().uuid().optional(),
 });
 
-chatRouter.post("/", requireAuth, async (req, res) => {
-  const parsed = askSchema.safeParse(req.body);
-  if (!parsed.success) {
-    return res.status(400).json({ error: parsed.error.flatten().fieldErrors });
+chatRouter.post(
+  "/",
+  requireAuth,
+  rateLimit({ name: "chat-minute", limit: 10, windowSeconds: 60 }),
+  rateLimit({ name: "chat-day", limit: 100, windowSeconds: 86400 }),
+  async (req, res) => {
+    const parsed = askSchema.safeParse(req.body);
+    if (!parsed.success) {
+      return res.status(400).json({ error: parsed.error.flatten().fieldErrors });
+    }
+    try {
+      const result = await answerQuestion(req.user!, parsed.data.question, parsed.data.chatId);
+      return res.json(result);
+    } catch (err) {
+      if (err instanceof HttpError) return res.status(err.status).json({ error: err.message });
+      throw err;
+    }
   }
-  try {
-    const result = await answerQuestion(req.user!, parsed.data.question, parsed.data.chatId);
-    return res.json(result);
-  } catch (err) {
-    if (err instanceof HttpError) return res.status(err.status).json({ error: err.message });
-    throw err;
-  }
-});
+);
 
 chatRouter.get("/", requireAuth, async (req, res) => {
   const result = await pool.query(

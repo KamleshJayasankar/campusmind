@@ -4,6 +4,7 @@ import jwt from "jsonwebtoken";
 import { z } from "zod";
 import { pool } from "../../db";
 import { requireAuth } from "../../middleware/auth";
+import { rateLimit } from "../../middleware/rateLimit";
 
 export const authRouter = Router();
 
@@ -27,7 +28,7 @@ function signToken(user: { id: string; role: string; department_id: string | nul
   );
 }
 
-authRouter.post("/register", async (req, res) => {
+authRouter.post("/register", rateLimit({ name: "register", limit: 10, windowSeconds: 60 }), async (req, res) => {
   const parsed = registerSchema.safeParse(req.body);
   if (!parsed.success) {
     return res.status(400).json({ error: parsed.error.flatten().fieldErrors });
@@ -57,7 +58,7 @@ authRouter.post("/register", async (req, res) => {
   }
 });
 
-authRouter.post("/login", async (req, res) => {
+authRouter.post("/login", rateLimit({ name: "login", limit: 10, windowSeconds: 60 }), async (req, res) => {
   const parsed = loginSchema.safeParse(req.body);
   if (!parsed.success) {
     return res.status(400).json({ error: "Invalid input" });

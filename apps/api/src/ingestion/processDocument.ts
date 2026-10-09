@@ -4,6 +4,7 @@ import { PDFParse } from "pdf-parse";
 import { pool } from "../db";
 import { getEmbeddingProvider } from "../ai/embeddings";
 import { chunkPages } from "./chunker";
+import { bumpDocsVersion } from "../cache";
 
 export async function processDocument(documentId: string) {
   const found = await pool.query("SELECT storage_path FROM documents WHERE id = $1", [documentId]);
@@ -40,6 +41,7 @@ export async function processDocument(documentId: string) {
       }
       await client.query("UPDATE documents SET status = 'ready', page_count = $2 WHERE id = $1", [documentId, pages.length]);
       await client.query("COMMIT");
+      await bumpDocsVersion();
     } catch (err) {
       await client.query("ROLLBACK");
       throw err;
