@@ -3,6 +3,7 @@ import express, { NextFunction, Request, Response } from "express";
 import cors from "cors";
 import { authRouter } from "./modules/auth/auth.routes";
 import { documentsRouter } from "./modules/documents/documents.routes";
+import { chatRouter } from "./modules/chat/chat.routes";
 
 if (!process.env.JWT_SECRET || !process.env.DATABASE_URL) {
   throw new Error("JWT_SECRET and DATABASE_URL must be set in apps/api/.env");
@@ -18,6 +19,7 @@ app.get("/health", (_req, res) => {
 
 app.use("/auth", authRouter);
 app.use("/documents", documentsRouter);
+app.use("/chat", chatRouter);
 
 app.use((err: Error, _req: Request, res: Response, _next: NextFunction) => {
   console.error(err);
