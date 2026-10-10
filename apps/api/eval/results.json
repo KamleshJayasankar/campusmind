@@ -1,60 +1,406 @@
 {
-  "ranAt": "2026-10-10T03:08:29.527Z",
+  "ranAt": "2026-10-10T16:33:33.356Z",
   "embeddingModel": "gemini-embedding-001",
   "generationModel": "gemini-3.1-flash-lite",
   "minScore": 0.55,
-  "total": 5,
-  "passed": 5,
+  "total": 44,
+  "passed": 44,
   "results": [
-    {
-      "question": "What is the minimum attendance required to write the semester exam?",
-      "answerable": true,
-      "topScore": 0.7748892744004708,
-      "retrievalHit": true,
-      "refused": false,
-      "pass": true,
-      "ms": 1387,
-      "answer": "The minimum attendance required to be eligible for the semester examination is 75 percent [1]."
-    },
-    {
-      "question": "Can I apply for condonation if my attendance is 70 percent?",
-      "answerable": true,
-      "topScore": 0.7167228891570083,
-      "retrievalHit": true,
-      "refused": false,
-      "pass": true,
-      "ms": 1691,
-      "answer": "Yes, you may apply for condonation if your attendance is between 65 and 75 percent, provided you have a medical certificate [1]."
-    },
-    {
-      "question": "Who announces the last date to pay the exam fee?",
-      "answerable": true,
-      "topScore": 0.6674304990104514,
-      "retrievalHit": true,
-      "refused": false,
-      "pass": true,
-      "ms": 1632,
-      "answer": "The Controller of Examinations announces the last date to pay the exam fee [1]."
-    },
     {
       "question": "What is the hostel fee for first-year students?",
       "answerable": false,
-      "topScore": 0.6059728004104513,
+      "topScore": 0.5407203797510738,
       "retrievalHit": null,
       "refused": true,
       "pass": true,
-      "ms": 5761,
-      "answer": "I couldn't find this in the uploaded documents."
+      "ms": 662
     },
     {
       "question": "Who won the cricket world cup?",
       "answerable": false,
-      "topScore": 0.4587723893827581,
+      "topScore": 0.5082773980915878,
       "retrievalHit": null,
       "refused": true,
       "pass": true,
-      "ms": 580,
-      "answer": "I couldn't find this in the uploaded documents."
+      "ms": 583
+    },
+    {
+      "question": "How long is the grace period for students who arrive late to a continuous assessment test?",
+      "answerable": true,
+      "topScore": 0.7085870624614555,
+      "retrievalHit": true,
+      "refused": false,
+      "pass": true,
+      "ms": 2039
+    },
+    {
+      "question": "How many minutes before the exam should I be seated in the hall?",
+      "answerable": true,
+      "topScore": 0.6610020760389134,
+      "retrievalHit": true,
+      "refused": false,
+      "pass": true,
+      "ms": 4522
+    },
+    {
+      "question": "Is it okay to keep my mobile phone with me in the exam hall if it is switched off?",
+      "answerable": true,
+      "topScore": 0.7205181464382625,
+      "retrievalHit": true,
+      "refused": false,
+      "pass": true,
+      "ms": 1710
+    },
+    {
+      "question": "What should I do with the blank pages in my answer sheet at the end of the exam?",
+      "answerable": true,
+      "topScore": 0.6986967025826495,
+      "retrievalHit": true,
+      "refused": false,
+      "pass": true,
+      "ms": 1782
+    },
+    {
+      "question": "What is the passing mark for a continuous assessment test?",
+      "answerable": false,
+      "topScore": 0.6731066088460886,
+      "retrievalHit": null,
+      "refused": true,
+      "pass": true,
+      "ms": 1884
+    },
+    {
+      "question": "What is Node.js?",
+      "answerable": true,
+      "topScore": 0.7214829392879619,
+      "retrievalHit": null,
+      "refused": false,
+      "pass": true,
+      "ms": 1825
+    },
+    {
+      "question": "Which version of Node.js should I download from nodejs.org?",
+      "answerable": true,
+      "topScore": 0.7035802308791868,
+      "retrievalHit": true,
+      "refused": false,
+      "pass": true,
+      "ms": 1537
+    },
+    {
+      "question": "How do I check which versions of Node.js and npm are installed?",
+      "answerable": true,
+      "topScore": 0.6928119355852611,
+      "retrievalHit": true,
+      "refused": false,
+      "pass": true,
+      "ms": 1678
+    },
+    {
+      "question": "How do I install an npm package globally?",
+      "answerable": true,
+      "topScore": 0.7224250197887813,
+      "retrievalHit": true,
+      "refused": false,
+      "pass": true,
+      "ms": 1446
+    },
+    {
+      "question": "How can I make a function in one Node.js file available to another file?",
+      "answerable": true,
+      "topScore": 0.7156214252655784,
+      "retrievalHit": null,
+      "refused": false,
+      "pass": true,
+      "ms": 2221
+    },
+    {
+      "question": "What is the difference between fs.writeFile and fs.appendFile?",
+      "answerable": true,
+      "topScore": 0.7495894490108992,
+      "retrievalHit": true,
+      "refused": false,
+      "pass": true,
+      "ms": 2589
+    },
+    {
+      "question": "What are the three states of a Promise?",
+      "answerable": true,
+      "topScore": 0.6555151347832742,
+      "retrievalHit": true,
+      "refused": false,
+      "pass": true,
+      "ms": 1996
+    },
+    {
+      "question": "Why is the value returned by setTimeout stored in a variable?",
+      "answerable": true,
+      "topScore": 0.7392247637277339,
+      "retrievalHit": true,
+      "refused": false,
+      "pass": true,
+      "ms": 1849
+    },
+    {
+      "question": "What message does the timer example print when the scheduled task is cancelled?",
+      "answerable": true,
+      "topScore": 0.7526026292827085,
+      "retrievalHit": true,
+      "refused": false,
+      "pass": true,
+      "ms": 3790
+    },
+    {
+      "question": "What does the divide function in calculator.js return when the divisor is zero?",
+      "answerable": true,
+      "topScore": 0.7399083528403478,
+      "retrievalHit": true,
+      "refused": false,
+      "pass": true,
+      "ms": 1751
+    },
+    {
+      "question": "Which background colour does the username input get when it receives focus?",
+      "answerable": true,
+      "topScore": 0.7683511861691682,
+      "retrievalHit": true,
+      "refused": false,
+      "pass": true,
+      "ms": 1987
+    },
+    {
+      "question": "Which port does the example HTTP server listen on, and what does it return for unknown routes?",
+      "answerable": true,
+      "topScore": 0.7515775326907107,
+      "retrievalHit": true,
+      "refused": false,
+      "pass": true,
+      "ms": 2088
+    },
+    {
+      "question": "What does the calculator program print for a = 20 and b = 5?",
+      "answerable": true,
+      "topScore": 0.7379571155558377,
+      "retrievalHit": true,
+      "refused": false,
+      "pass": true,
+      "ms": 1679
+    },
+    {
+      "question": "Which keyword is used to inherit a class in Java?",
+      "answerable": true,
+      "topScore": 0.6439487781120015,
+      "retrievalHit": true,
+      "refused": false,
+      "pass": true,
+      "ms": 1988
+    },
+    {
+      "question": "Which file is the standard Maven project configuration file?",
+      "answerable": true,
+      "topScore": 0.6490946649387719,
+      "retrievalHit": true,
+      "refused": false,
+      "pass": true,
+      "ms": 1576
+    },
+    {
+      "question": "What is the main purpose of Maven in Java development?",
+      "answerable": true,
+      "topScore": 0.6902257499360478,
+      "retrievalHit": true,
+      "refused": false,
+      "pass": true,
+      "ms": 1578
+    },
+    {
+      "question": "What is the main responsibility of the Controller in MVC?",
+      "answerable": true,
+      "topScore": 0.6311086454811548,
+      "retrievalHit": true,
+      "refused": false,
+      "pass": true,
+      "ms": 1782
+    },
+    {
+      "question": "Which annotations are commonly used to build REST APIs with Spring?",
+      "answerable": true,
+      "topScore": 0.7047842928798026,
+      "retrievalHit": null,
+      "refused": false,
+      "pass": true,
+      "ms": 1676
+    },
+    {
+      "question": "Which methods of the Node.js fs module read, write and append files?",
+      "answerable": true,
+      "topScore": 0.7662491344427027,
+      "retrievalHit": null,
+      "refused": false,
+      "pass": true,
+      "ms": 2091
+    },
+    {
+      "question": "What should the binary search program print if the target is not found?",
+      "answerable": true,
+      "topScore": 0.7239620795498138,
+      "retrievalHit": true,
+      "refused": false,
+      "pass": true,
+      "ms": 1883
+    },
+    {
+      "question": "What HTTP status does the Product Search REST API return when no product matches?",
+      "answerable": true,
+      "topScore": 0.6074640183383635,
+      "retrievalHit": true,
+      "refused": false,
+      "pass": true,
+      "ms": 1885
+    },
+    {
+      "question": "Which port is configured for the college REST application?",
+      "answerable": true,
+      "topScore": 0.731932379976928,
+      "retrievalHit": true,
+      "refused": false,
+      "pass": true,
+      "ms": 1575
+    },
+    {
+      "question": "Which three products are stored in memory in the Product Search API?",
+      "answerable": true,
+      "topScore": 0.6425277109445435,
+      "retrievalHit": true,
+      "refused": false,
+      "pass": true,
+      "ms": 1680
+    },
+    {
+      "question": "What is a SUPER STRING in the string verification problem?",
+      "answerable": true,
+      "topScore": 0.7197564823598628,
+      "retrievalHit": true,
+      "refused": false,
+      "pass": true,
+      "ms": 3112
+    },
+    {
+      "question": "How do I deploy a Node.js application to AWS?",
+      "answerable": false,
+      "topScore": 0.6320402587402947,
+      "retrievalHit": null,
+      "refused": true,
+      "pass": true,
+      "ms": 1545
+    },
+    {
+      "question": "What is the difference between MongoDB and MySQL?",
+      "answerable": false,
+      "topScore": 0.543639364121787,
+      "retrievalHit": null,
+      "refused": true,
+      "pass": true,
+      "ms": 589
+    },
+    {
+      "question": "How do I use the useState hook in React?",
+      "answerable": false,
+      "topScore": 0.5769737080021557,
+      "retrievalHit": null,
+      "refused": true,
+      "pass": true,
+      "ms": 1981
+    },
+    {
+      "question": "What is the pass mark for the Full Stack Web Technologies exam?",
+      "answerable": false,
+      "topScore": 0.6152593549839617,
+      "retrievalHit": null,
+      "refused": true,
+      "pass": true,
+      "ms": 1987
+    },
+    {
+      "question": "When is the Full Stack Web Technologies exam held?",
+      "answerable": false,
+      "topScore": 0.6171020070441358,
+      "retrievalHit": null,
+      "refused": true,
+      "pass": true,
+      "ms": 1783
+    },
+    {
+      "question": "How do I connect Node.js to MongoDB using Mongoose?",
+      "answerable": false,
+      "topScore": 0.6383897803615964,
+      "retrievalHit": null,
+      "refused": true,
+      "pass": true,
+      "ms": 1883
+    },
+    {
+      "question": "Can I wear a smart watch during an internal test?",
+      "answerable": true,
+      "topScore": 0.6906095603397893,
+      "retrievalHit": true,
+      "refused": false,
+      "pass": true,
+      "ms": 5258
+    },
+    {
+      "question": "Which items are not allowed inside the exam hall?",
+      "answerable": true,
+      "topScore": 0.7271874193247344,
+      "retrievalHit": true,
+      "refused": false,
+      "pass": true,
+      "ms": 1787
+    },
+    {
+      "question": "Which HTTP methods are used for CRUD operations in REST APIs?",
+      "answerable": true,
+      "topScore": 0.6581067845570129,
+      "retrievalHit": true,
+      "refused": false,
+      "pass": true,
+      "ms": 2108
+    },
+    {
+      "question": "What does the binary search program print for the sorted list 1 3 5 7 9 and target 7?",
+      "answerable": true,
+      "topScore": 0.7252745272451473,
+      "retrievalHit": true,
+      "refused": false,
+      "pass": true,
+      "ms": 1558
+    },
+    {
+      "question": "In the error-first callback example, what is printed when the student ID is -1?",
+      "answerable": true,
+      "topScore": 0.7965027371815466,
+      "retrievalHit": true,
+      "refused": false,
+      "pass": true,
+      "ms": 2293
+    },
+    {
+      "question": "wat is npm init used for",
+      "answerable": true,
+      "topScore": 0.6669858843948316,
+      "retrievalHit": null,
+      "refused": false,
+      "pass": true,
+      "ms": 1985
+    },
+    {
+      "question": "What is the duration of the semester examination?",
+      "answerable": false,
+      "topScore": 0.6535324152729641,
+      "retrievalHit": null,
+      "refused": true,
+      "pass": true,
+      "ms": 8438
     }
   ]
 }

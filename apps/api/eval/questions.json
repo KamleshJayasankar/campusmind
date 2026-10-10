@@ -1,23 +1,5 @@
 [
   {
-    "question": "What is the minimum attendance required to write the semester exam?",
-    "answerable": true,
-    "expectDocument": "Exam Regulations",
-    "mustInclude": ["75"]
-  },
-  {
-    "question": "Can I apply for condonation if my attendance is 70 percent?",
-    "answerable": true,
-    "expectDocument": "Exam Regulations",
-    "mustInclude": ["condonation", "medical certificate"]
-  },
-  {
-    "question": "Who announces the last date to pay the exam fee?",
-    "answerable": true,
-    "expectDocument": "Exam Regulations",
-    "mustInclude": ["Controller of Examinations"]
-  },
-  {
     "question": "What is the hostel fee for first-year students?",
     "answerable": false
   },
@@ -25,32 +7,317 @@
     "question": "Who won the cricket world cup?",
     "answerable": false
   },
-    {
+  {
     "question": "How long is the grace period for students who arrive late to a continuous assessment test?",
     "answerable": true,
     "expectDocument": "Students Circular",
-    "mustInclude": ["5"]
+    "mustInclude": [
+      "5"
+    ]
   },
   {
     "question": "How many minutes before the exam should I be seated in the hall?",
     "answerable": true,
     "expectDocument": "Students Circular",
-    "mustInclude": ["10"]
+    "mustInclude": [
+      "10"
+    ]
   },
   {
     "question": "Is it okay to keep my mobile phone with me in the exam hall if it is switched off?",
     "answerable": true,
     "expectDocument": "Students Circular",
-    "mustInclude": ["confiscated"]
+    "mustInclude": [
+      "confiscated"
+    ]
   },
   {
     "question": "What should I do with the blank pages in my answer sheet at the end of the exam?",
     "answerable": true,
     "expectDocument": "Students Circular",
-    "mustInclude": ["strike"]
+    "mustInclude": [
+      "strike"
+    ]
   },
   {
     "question": "What is the passing mark for a continuous assessment test?",
+    "answerable": false
+  },
+  {
+    "question": "What is Node.js?",
+    "answerable": true,
+    "mustInclude": [
+      "runtime"
+    ]
+  },
+  {
+    "question": "Which version of Node.js should I download from nodejs.org?",
+    "answerable": true,
+    "expectDocument": "Question Bank",
+    "mustInclude": [
+      "LTS"
+    ]
+  },
+  {
+    "question": "How do I check which versions of Node.js and npm are installed?",
+    "answerable": true,
+    "expectDocument": "Question Bank",
+    "mustInclude": [
+      "node -v",
+      "npm -v"
+    ]
+  },
+  {
+    "question": "How do I install an npm package globally?",
+    "answerable": true,
+    "expectDocument": "Question Bank",
+    "mustInclude": [
+      "-g"
+    ]
+  },
+  {
+    "question": "How can I make a function in one Node.js file available to another file?",
+    "answerable": true,
+    "mustInclude": [
+      "module.exports"
+    ]
+  },
+  {
+    "question": "What is the difference between fs.writeFile and fs.appendFile?",
+    "answerable": true,
+    "expectDocument": "Question Bank",
+    "mustInclude": [
+      "overwrite"
+    ]
+  },
+  {
+    "question": "What are the three states of a Promise?",
+    "answerable": true,
+    "expectDocument": "Question Bank",
+    "mustInclude": [
+      "pending",
+      "fulfilled",
+      "rejected"
+    ]
+  },
+  {
+    "question": "Why is the value returned by setTimeout stored in a variable?",
+    "answerable": true,
+    "expectDocument": "Question Bank",
+    "mustInclude": [
+      "cancel"
+    ]
+  },
+  {
+    "question": "What message does the timer example print when the scheduled task is cancelled?",
+    "answerable": true,
+    "expectDocument": "Question Bank",
+    "mustInclude": [
+      "Scheduled task cancelled"
+    ]
+  },
+  {
+    "question": "What does the divide function in calculator.js return when the divisor is zero?",
+    "answerable": true,
+    "expectDocument": "Question Bank",
+    "mustInclude": [
+      "Cannot divide by zero"
+    ]
+  },
+  {
+    "question": "Which background colour does the username input get when it receives focus?",
+    "answerable": true,
+    "expectDocument": "Question Bank",
+    "mustInclude": [
+      "#e0f2fe"
+    ]
+  },
+  {
+    "question": "Which port does the example HTTP server listen on, and what does it return for unknown routes?",
+    "answerable": true,
+    "expectDocument": "Question Bank",
+    "mustInclude": [
+      "3000",
+      "404"
+    ]
+  },
+  {
+    "question": "What does the calculator program print for a = 20 and b = 5?",
+    "answerable": true,
+    "expectDocument": "Question Bank",
+    "mustInclude": [
+      "25",
+      "100"
+    ]
+  },
+  {
+    "question": "Which keyword is used to inherit a class in Java?",
+    "answerable": true,
+    "expectDocument": "MCQs",
+    "mustInclude": [
+      "extends"
+    ]
+  },
+  {
+    "question": "Which file is the standard Maven project configuration file?",
+    "answerable": true,
+    "expectDocument": "MCQs",
+    "mustInclude": [
+      "pom.xml"
+    ]
+  },
+  {
+    "question": "What is the main purpose of Maven in Java development?",
+    "answerable": true,
+    "expectDocument": "MCQs",
+    "mustInclude": [
+      "dependenc"
+    ]
+  },
+  {
+    "question": "What is the main responsibility of the Controller in MVC?",
+    "answerable": true,
+    "expectDocument": "MCQs",
+    "mustInclude": [
+      "request"
+    ]
+  },
+  {
+    "question": "Which annotations are commonly used to build REST APIs with Spring?",
+    "answerable": true,
+    "mustInclude": [
+      "@RestController",
+      "@GetMapping"
+    ]
+  },
+  {
+    "question": "Which methods of the Node.js fs module read, write and append files?",
+    "answerable": true,
+    "mustInclude": [
+      "readFile",
+      "writeFile",
+      "appendFile"
+    ]
+  },
+  {
+    "question": "What should the binary search program print if the target is not found?",
+    "answerable": true,
+    "expectDocument": "Java Coding",
+    "mustInclude": [
+      "-1"
+    ]
+  },
+  {
+    "question": "What HTTP status does the Product Search REST API return when no product matches?",
+    "answerable": true,
+    "expectDocument": "Java Coding",
+    "mustInclude": [
+      "404"
+    ]
+  },
+  {
+    "question": "Which port is configured for the college REST application?",
+    "answerable": true,
+    "expectDocument": "Java Coding",
+    "mustInclude": [
+      "8081"
+    ]
+  },
+  {
+    "question": "Which three products are stored in memory in the Product Search API?",
+    "answerable": true,
+    "expectDocument": "Java Coding",
+    "mustInclude": [
+      "Laptop",
+      "Mouse",
+      "Keyboard"
+    ]
+  },
+  {
+    "question": "What is a SUPER STRING in the string verification problem?",
+    "answerable": true,
+    "expectDocument": "Java Coding",
+    "mustInclude": [
+      "frequency"
+    ]
+  },
+  {
+    "question": "How do I deploy a Node.js application to AWS?",
+    "answerable": false
+  },
+  {
+    "question": "What is the difference between MongoDB and MySQL?",
+    "answerable": false
+  },
+  {
+    "question": "How do I use the useState hook in React?",
+    "answerable": false
+  },
+  {
+    "question": "What is the pass mark for the Full Stack Web Technologies exam?",
+    "answerable": false
+  },
+  {
+    "question": "When is the Full Stack Web Technologies exam held?",
+    "answerable": false
+  },
+  {
+    "question": "How do I connect Node.js to MongoDB using Mongoose?",
+    "answerable": false
+  },
+  {
+    "question": "Can I wear a smart watch during an internal test?",
+    "answerable": true,
+    "expectDocument": "Students Circular",
+    "mustInclude": [
+      "not allowed"
+    ]
+  },
+  {
+    "question": "Which items are not allowed inside the exam hall?",
+    "answerable": true,
+    "expectDocument": "Students Circular",
+    "mustInclude": [
+      "smart watch",
+      "calculator"
+    ]
+  },
+  {
+    "question": "Which HTTP methods are used for CRUD operations in REST APIs?",
+    "answerable": true,
+    "expectDocument": "MCQs",
+    "mustInclude": [
+      "GET",
+      "POST",
+      "PUT",
+      "DELETE"
+    ]
+  },
+  {
+    "question": "What does the binary search program print for the sorted list 1 3 5 7 9 and target 7?",
+    "answerable": true,
+    "expectDocument": "Java Coding",
+    "mustInclude": [
+      "3"
+    ]
+  },
+  {
+    "question": "In the error-first callback example, what is printed when the student ID is -1?",
+    "answerable": true,
+    "expectDocument": "Question Bank",
+    "mustInclude": [
+      "Invalid Student ID"
+    ]
+  },
+  {
+    "question": "wat is npm init used for",
+    "answerable": true,
+    "mustInclude": [
+      "package.json"
+    ]
+  },
+  {
+    "question": "What is the duration of the semester examination?",
     "answerable": false
   }
 ]
