@@ -7,7 +7,15 @@ import { departmentsRouter } from "./modules/departments/departments.routes";
 
 export const app = express();
 
-app.use(cors());
+// Behind a hosting proxy (Render, Vercel...) the real client IP arrives in X-Forwarded-For.
+// Without this, every user would share the proxy's IP and the login rate limit.
+app.set("trust proxy", 1);
+
+app.use(
+  cors({
+    origin: process.env.CORS_ORIGIN ? process.env.CORS_ORIGIN.split(",").map((o) => o.trim()) : true,
+  })
+);
 app.use(express.json());
 
 app.get("/health", (_req, res) => {

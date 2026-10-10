@@ -9,7 +9,8 @@
     "worker": "tsx watch src/worker.ts",
     "typecheck": "tsc -p .",
     "eval": "tsx eval/run.ts",
-    "reprocess": "tsx scripts/reprocess.ts"
+    "reprocess": "tsx scripts/reprocess.ts",
+    "start": "tsx src/index.ts"
   },
   "keywords": [],
   "author": "",
@@ -25,6 +26,7 @@
     "multer": "^2.4.0",
     "pdf-parse": "^2.4.5",
     "pg": "^8.23.1",
+    "tsx": "^4.23.15",
     "zod": "^4.6.5"
   },
   "devDependencies": {
@@ -36,7 +38,6 @@
     "@types/pg": "^8.23.1",
     "@types/supertest": "^7.2.1",
     "supertest": "^7.3.1",
-    "tsx": "^4.23.15",
     "typescript": "^7.0.2",
     "vitest": "^4.1.0"
   }
