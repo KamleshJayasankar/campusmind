@@ -1,0 +1,60 @@
+{
+  "ranAt": "2026-10-10T02:47:52.933Z",
+  "embeddingModel": "gemini-embedding-001",
+  "generationModel": "gemini-3.1-flash-lite",
+  "minScore": 0.55,
+  "total": 5,
+  "passed": 5,
+  "results": [
+    {
+      "question": "What is the minimum attendance required to write the semester exam?",
+      "answerable": true,
+      "topScore": 0.7748892744004708,
+      "retrievalHit": true,
+      "refused": false,
+      "pass": true,
+      "ms": 1639,
+      "answer": "The minimum attendance required to be eligible for the semester examination is 75 percent [1]."
+    },
+    {
+      "question": "Can I apply for condonation if my attendance is 70 percent?",
+      "answerable": true,
+      "topScore": 0.7167228891570083,
+      "retrievalHit": true,
+      "refused": false,
+      "pass": true,
+      "ms": 1529,
+      "answer": "Yes, you may apply for condonation if your attendance is between 65 and 75 percent, provided you have a medical certificate [1]."
+    },
+    {
+      "question": "Who announces the last date to pay the exam fee?",
+      "answerable": true,
+      "topScore": 0.6674304990104514,
+      "retrievalHit": true,
+      "refused": false,
+      "pass": true,
+      "ms": 1221,
+      "answer": "The Controller of Examinations announces the last date to pay the exam fee [1]."
+    },
+    {
+      "question": "What is the hostel fee for first-year students?",
+      "answerable": false,
+      "topScore": 0.6059728004104513,
+      "retrievalHit": null,
+      "refused": true,
+      "pass": true,
+      "ms": 1938,
+      "answer": "I couldn't find this in the uploaded documents."
+    },
+    {
+      "question": "Who won the cricket world cup?",
+      "answerable": false,
+      "topScore": 0.4587723893827581,
+      "retrievalHit": null,
+      "refused": true,
+      "pass": true,
+      "ms": 613,
+      "answer": "I couldn't find this in the uploaded documents."
+    }
+  ]
+}

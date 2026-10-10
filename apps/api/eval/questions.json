@@ -1,0 +1,28 @@
+[
+  {
+    "question": "What is the minimum attendance required to write the semester exam?",
+    "answerable": true,
+    "expectDocument": "Exam Regulations",
+    "mustInclude": ["75"]
+  },
+  {
+    "question": "Can I apply for condonation if my attendance is 70 percent?",
+    "answerable": true,
+    "expectDocument": "Exam Regulations",
+    "mustInclude": ["condonation", "medical certificate"]
+  },
+  {
+    "question": "Who announces the last date to pay the exam fee?",
+    "answerable": true,
+    "expectDocument": "Exam Regulations",
+    "mustInclude": ["Controller of Examinations"]
+  },
+  {
+    "question": "What is the hostel fee for first-year students?",
+    "answerable": false
+  },
+  {
+    "question": "Who won the cricket world cup?",
+    "answerable": false
+  }
+]

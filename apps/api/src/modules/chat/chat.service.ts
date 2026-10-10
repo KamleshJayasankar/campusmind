@@ -16,7 +16,7 @@ export class HttpError extends Error {
   }
 }
 
-type RetrievedChunk = {
+export type RetrievedChunk = {
   documentId: string;
   title: string;
   page: number | null;
@@ -35,7 +35,7 @@ type Source = {
 
 type CachedAnswer = { answer: string; sources: Source[] };
 
-async function retrieve(question: string, departmentId: string | null): Promise<RetrievedChunk[]> {
+export async function retrieve(question: string, departmentId: string | null): Promise<RetrievedChunk[]> {
   const queryEmbedding = await getEmbeddingProvider().embedQuery(question);
   const result = await pool.query(
     `SELECT d.id AS document_id, d.title, c.page_number, c.content,
@@ -56,10 +56,7 @@ async function retrieve(question: string, departmentId: string | null): Promise<
   }));
 }
 
-async function generateWithSources(question: string, departmentId: string | null): Promise<CachedAnswer> {
-  const chunks = await retrieve(question, departmentId);
-  console.log("retrieval scores:", chunks.map((c) => c.score.toFixed(3)).join(", ") || "none");
-
+export async function answerFromChunks(question: string, chunks: RetrievedChunk[]): Promise<CachedAnswer> {
   if (chunks.length === 0 || chunks[0].score < MIN_SCORE) {
     return { answer: NOT_FOUND_ANSWER, sources: [] };
   }
@@ -88,6 +85,12 @@ async function generateWithSources(question: string, departmentId: string | null
     if (cited.size > 0) sources = sources.filter((s) => cited.has(s.index));
   }
   return { answer, sources };
+}
+
+async function generateWithSources(question: string, departmentId: string | null): Promise<CachedAnswer> {
+  const chunks = await retrieve(question, departmentId);
+  console.log("retrieval scores:", chunks.map((c) => c.score.toFixed(3)).join(", ") || "none");
+  return answerFromChunks(question, chunks);
 }
 
 // The cache key includes a "docs version" that changes whenever a document is
