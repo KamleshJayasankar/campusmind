@@ -24,5 +24,33 @@
   {
     "question": "Who won the cricket world cup?",
     "answerable": false
+  },
+    {
+    "question": "How long is the grace period for students who arrive late to a continuous assessment test?",
+    "answerable": true,
+    "expectDocument": "Students Circular",
+    "mustInclude": ["5"]
+  },
+  {
+    "question": "How many minutes before the exam should I be seated in the hall?",
+    "answerable": true,
+    "expectDocument": "Students Circular",
+    "mustInclude": ["10"]
+  },
+  {
+    "question": "Is it okay to keep my mobile phone with me in the exam hall if it is switched off?",
+    "answerable": true,
+    "expectDocument": "Students Circular",
+    "mustInclude": ["confiscated"]
+  },
+  {
+    "question": "What should I do with the blank pages in my answer sheet at the end of the exam?",
+    "answerable": true,
+    "expectDocument": "Students Circular",
+    "mustInclude": ["strike"]
+  },
+  {
+    "question": "What is the passing mark for a continuous assessment test?",
+    "answerable": false
   }
 ]

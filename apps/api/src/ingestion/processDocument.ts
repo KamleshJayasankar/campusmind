@@ -4,6 +4,7 @@ import { PDFParse } from "pdf-parse";
 import { pool } from "../db";
 import { getEmbeddingProvider } from "../ai/embeddings";
 import { chunkPages } from "./chunker";
+import { ocrPdf } from "./ocr";
 import { bumpDocsVersion } from "../cache";
 
 export async function processDocument(documentId: string) {
@@ -22,8 +23,14 @@ export async function processDocument(documentId: string) {
       await parser.destroy();
     }
 
-    const chunks = chunkPages(pages);
-    if (chunks.length === 0) throw new Error("No extractable text found (scanned PDF?)");
+    let chunks = chunkPages(pages);
+    if (chunks.length === 0) {
+      // No text layer: probably a scanned document, so read the page images instead.
+      console.log(`No text layer in document ${documentId}, trying OCR`);
+      pages = await ocrPdf(buffer);
+      chunks = chunkPages(pages);
+    }
+    if (chunks.length === 0) throw new Error("No readable text found, even with OCR");
 
     const provider = getEmbeddingProvider();
     const embeddings = await provider.embedDocuments(chunks.map((c) => c.content));
