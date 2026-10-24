@@ -30,7 +30,7 @@ Try asking: *How many books can a student borrow at a time?*, *What is the late 
 ## How it works
 
 ```mermaid
-flowchart LR
+flowchart TD
     U[Browser] --> W[Next.js web app<br/>Vercel]
     W --> A[Express API<br/>Render]
     A --> P[(PostgreSQL + pgvector<br/>Neon)]
