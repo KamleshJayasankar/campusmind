@@ -22,7 +22,9 @@ export default function Nav({ user }: { user: User }) {
   return (
     <header className="flex h-14 shrink-0 items-center justify-between border-b border-slate-200 bg-white px-4">
       <div className="flex items-center gap-4">
-        <span className="text-lg font-bold text-indigo-700">CampusMind</span>
+        <Link href="/chat" className="text-lg font-bold text-indigo-700">
+          CampusMind
+        </Link>
         <nav className="flex gap-1">
           {link("/chat", "Chat")}
           {link("/documents", "Documents")}

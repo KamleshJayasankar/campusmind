@@ -25,7 +25,9 @@ Try asking: *How many books can a student borrow at a time?*, *What is the late 
 - **Background ingestion.** Uploads return immediately; a worker extracts, chunks, embeds and stores the text, and the UI shows the status live.
 - **Protection.** JWT authentication, bcrypt password hashing, input validation, Redis rate limiting and a Redis answer cache.
 - **Private chat history** for each user.
-- **Engineering practice.** 38 automated tests, GitHub Actions CI and a scored evaluation set.
+- **Document management.** Faculty and admins can upload, rename and delete their documents in the app. Admins can manage any document.
+- **Landing page** that explains the project, with free sign-up.
+- **Engineering practice.** 48 automated tests, GitHub Actions CI and a scored evaluation set.
 
 ## How it works
 
@@ -87,7 +89,7 @@ Rerun it with `npm run eval --workspace api -- --dept csbs`.
 
 ## Testing and CI
 
-- 38 tests: chunking, authentication, document upload and access, chat (access control, caching, refusals, history, rate limiting), OCR and proxy handling.
+- 48 tests: chunking, authentication, document upload and access, chat (access control, caching, refusals, history, rate limiting), OCR and proxy handling.
 - Tests call the real HTTP API against a separate `campusmind_test` database. Gemini, the queue and embeddings are replaced with fakes, so tests are fast, free and repeatable. The test helpers refuse to run on a database whose name does not contain `_test`.
 - GitHub Actions starts Postgres (pgvector) and Redis, then runs the typecheck and tests for the API and the lint and build for the web app on every push.
 
@@ -187,7 +189,7 @@ apps/
   api/
     src/             Express app, auth, documents, chat, ingestion, AI clients, queue, worker
     db/001_init.sql  database schema
-    tests/           38 tests
+    tests/           48 tests
     eval/            evaluation questions and scoring script
     scripts/         reprocess failed documents
   web/               Next.js app (login, chat, documents)

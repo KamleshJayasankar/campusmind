@@ -57,11 +57,20 @@ export async function addDocument(options: {
   visibility?: "department" | "college";
   status?: "uploaded" | "processing" | "ready" | "failed";
   text?: string;
+  uploadedBy?: string;
+  storagePath?: string;
 }) {
   const doc = await pool.query(
-    `INSERT INTO documents (department_id, title, filename, storage_path, visibility, status)
-     VALUES ($1, $2, 'file.pdf', 'uploads/file.pdf', $3, $4) RETURNING id`,
-    [options.departmentId, options.title, options.visibility ?? "department", options.status ?? "ready"]
+    `INSERT INTO documents (department_id, title, filename, storage_path, visibility, status, uploaded_by)
+     VALUES ($1, $2, 'file.pdf', $5, $3, $4, $6) RETURNING id`,
+    [
+      options.departmentId,
+      options.title,
+      options.visibility ?? "department",
+      options.status ?? "ready",
+      options.storagePath ?? "uploads/file.pdf",
+      options.uploadedBy ?? null,
+    ]
   );
   await pool.query(
     `INSERT INTO chunks (document_id, chunk_index, page_number, content, embedding, embedding_model)

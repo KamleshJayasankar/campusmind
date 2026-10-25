@@ -37,6 +37,7 @@ export type DocumentItem = {
   error_message: string | null;
   page_count: number | null;
   created_at: string;
+  can_manage?: boolean;
 };
 
 export type Department = { id: string; name: string; slug: string };
