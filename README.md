@@ -12,6 +12,8 @@ Try asking: *How many books can a student borrow at a time?*, *What is the late 
 
 ## Screenshots
 
+![Landing page](docs/screenshots/landing.png)
+
 ![Chat with cited sources](docs/screenshots/chat.png)
 
 ![Document upload and processing status](docs/screenshots/documents.png)
